@@ -20,7 +20,7 @@ services:
       - db
     volumes: ["./html:/var/www/html"]
     ports:
-      - "8000:80"
+      - "${PORT:-8000}:80"
     environment:
       - WORDPRESS_DB_HOST=db:3306
       - WORDPRESS_DB_USER=root
